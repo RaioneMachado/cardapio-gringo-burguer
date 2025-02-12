@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Gringo Burguer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<body>
+    <div class="menu">
+        <div class="logo-container">
+            <div class="logo-text-left">GRINGO</div>
+            <img src="imagens/logo gringo burguer.jpg" alt="Logo" class="logo">
+            <div class="logo-text-right">BURGUER</div>
+        </div>
+
+<!-- Seção Combos -->
+<div class="section">
+    <h2>Combos</h2>
+    <div class="itens-container">
+        <!-- Club house -->
+        <div class="item" onclick="abrirPopup('imagens/club house combo.png', 'Clube House: O \'Club House é uma deliciosa torre de pão de forma levemente tostado na chapa, intercalada com suculento peito de frango cuidadosamente selado, generosas fatias de presunto e queijo cheddar derretido. Cada camada é realçada pelo nosso exclusivo molho de maionese grill. Acompanha uma salada crocante e fresca, com tomates suculentos. Para completar essa experiência gastronômica, oferecemos 200g de batatas fritas, crocantes por fora e macias por dentro, além de um refrescante refrigerante de 600ml. Este combo é a escolha perfeita para quem busca uma refeição completa e saborosa.\' - R$ 42,90')">
+            <img src="imagens/club house combo.png" alt="Club House">
+            <p><strong>Club House</strong></p>
+            <p class="price"><strong>R$ 42,90</strong></p>
+        </div>
+
+        <!-- Combo familia -->
+        <div class="item" onclick="abrirPopup('caminho/para/imagem-combo2.jpg', 'Combo Família: O \'Combo familia\' é a escolha perfeita para compartilhar com os seus entes queridos. Este combo inclui um \'Caracas Burger\' de dupla carne suculenta, um \'Texano Burger\' especial com um sabor inigualável e um \'Dady\'s Burger\' para uma explosão de sabores. Acompanham esse maravilhoso trio, uma refrescante Coca-Cola de 1.5 litros, para saciar a sede de todos. Para complementar, temos uma porção generosa de batatas especiais, perfeitamente crocantes e suficiente para 3 pessoas. Este é o pacote perfeito para uma refeição em família memorável. - R$ 116,99')">
+            <img src="caminho/para/imagem-combo2.jpg" alt="Combo Família">
+            <p><strong>Combo Família</strong></p>
+            <p class="price"><strong>R$ 116,99</strong></p>
+        </div>
+    </div>
+</div>
+
+        <!-- hamburguer -->
+        <div class="section">
+            <h2>Hambúrguer</h2>
+            <div class="itens-container">
+
+                <!-- Hambúrguer Dady's burguer -->
+                <div class="item" onclick="abrirPopup('imagens/dadys burguer.webp', 'Dady s burguer uma joia da categoria Hambúrguer. Este prato traz um suculento blend de carne com 120gr, generosamente acomodado em um pão brioche levemente adocicado e selado na chapa com manteiga para um toque de crocância. Ele é cuidadosamente coberto com queijo cheddar derretido, dando um sabor rico e indulgente. A frescura do alface e do tomate acrescenta um contraste perfeito, enquanto nossa deliciosa maionese especial, secretamente temperada, leva este hambúrguer a um novo patamar de sabor. Uma experiência verdadeiramente irresistível para os amantes de hambúrguer! - R$ 23,90')">
+                    <img src="imagens/dadys burguer.webp" alt="Hamburguer Dadys Burguer">
+                    <p><strong>Dady's burguer</strong></p>
+                    <p class="price"><strong>R$ 23,90</strong></p>
+                </div>
+
+                <!-- Cheddar burguer Hambúrguer -->
+                <div class="item" onclick="abrirPopup('caminho/para/imagem-hamburguer2.jpg', 'Cheddar burguer Blend de carne 130gr, pão brioche selado na chapa com manteiga, queijo cheddar duplo, Bacon crysp e Maionese grill. - R$ 26,00')">
+                    <img src="caminho/para/imagem-hamburguer2.jpg" alt="Cheddar burguer">
+                    <p><strong>Cheddar burguer</strong></p>
+                    <p class="price"><strong>R$ 26,00</strong></p>
+                </div>
+
+                <!-- Hambúrguer Gringo Burguer dupla -->
+                <div class="item" onclick="abrirPopup('imagens/Gringo Burguer dupla.png', 'Gringo Burguer dupla: O Gringo Burguer Dupla é uma obra-prima culinária, meticulosamente composta por um blend primoroso de duas carnes selecionadas, cada uma pesando 130g. Este hambúrguer oferece uma experiência gustativa sem precedentes, harmonizada pela doçura sutil das cebolas caramelizadas e o sabor robusto do duplo queijo cheddar. O frescor crocante da alface e a suculência do tomate se unem ao bacon duplo, oferecendo uma textura crocante e um sabor defumado irresistível. Para um final surpreendente, um triplo toque do nosso exclusivo molho de alho grill, com um sutil toque de pimenta, completa esta delícia. Uma explosão de sabor que vai te conquistar! - R$ 35,90')">
+                    <img src="imagens/Gringo Burguer dupla.png" alt="Gringo Burguer dupla">
+                    <p><strong>Gringo Burguer dupla</strong></p>
+                    <p class="price"><strong>R$ 35,90</strong></p>
+                </div>
+
+                <!-- Hambúrguer Blak montain -->
+                <div class="item" onclick="abrirPopup('imagens/Blak montain.png', 'Blak montain: É uma experiência saborosa e inesquecível. A começar pelo pão australiano, cuidadosamente caramelizado na chapa até atingir a textura perfeita. Em seguida, um suculento blend de carne de 130gr, perfeitamente harmonizado com cebola roxa e bacon crocante. Mas o verdadeiro diferencial são os dois molhos excepcionais da casa: uma maionese grill, com seu sabor defumado, e uma maionese do gringo, repleta de especiarias. Um hambúrguer que promete levar seu paladar a uma verdadeira aventura gastronômica. - R$ 30,90')">
+                     <img src="imagens/Blak montain.png" alt="Blak montain">
+                     <p><strong>Blak montain</strong></p>
+                     <p class="price"><strong>R$ 30,90</strong></p>
+               </div>
+
+                <!-- Seção Hambúrguer -->
+                <div class="item" onclick="abrirPopup('caminho/para/imagem-hamburguer2.jpg', 'Pollito grelhado  uma deliciosa opção da categoria Hambúrguer. Este prato é composto por um suculento peito de frango grelhado de 150gr, que se une harmoniosamente ao queijo mussarela derretido. Acompanha ainda um tomate fresco, trazendo um toque refrescante e levemente ácido. A alface americana adiciona crocância e a cebola roxa, um sabor agridoce. Tudo isso acomodado num pão brioche selado na chapa, que entrega uma nota de doçura. Para finalizar, nosso exclusivo molho grill, dando ao prato um sabor único e inigualável. Uma explosão de sabores em cada mordida! - R$ 26,91')">
+                    <img src="caminho/para/imagem-hamburguer2.jpg" alt="Pollito grelhado">
+                    <p>Pollito grelhado</p>
+                    <p class="price">R$ 26,91</p>
+                </div>
+
+                <!-- Hambúrguer Gringo clássico-->
+                <div class="item" onclick="abrirPopup('imagens/Gringo clássico.png', 'Gringo clássico o queridinho da nossa seleção de hambúrgueres. Este prato é composto por um saboroso blend de carne de 130gr, harmoniosamente coberto com queijo cheddar derretido. Acompanhado de cebola roxa crocante, fatias de bacon fritas à perfeição e frescos alface e tomate. Tudo isso delicadamente acondicionado em um pão brioche dourado, selado na chapa para garantir um toque extra de crocância. Uma combinação clássica, feita com amor, que promete satisfazer até os paladares mais exigentes.- R$ 27,90')">
+                    <img src="imagens/Gringo clássico.png" alt="Gringo clássico">
+                    <p><strong>Gringo clássico</strong> clássico</strong></p>
+                    <p class="price"><strong>R$ 27,90</strong></p>
+                </div>
+
+                <!-- Hambúrguer Pollito crispy burguer-->
+                <div class="item" onclick="abrirPopup('imagens/Pollito crispy burguer.png', 'Pollito crispy burguer. Este deleite culinário é generosamente recheado com 150 gramas de peito de frango suculento, meticulosamente empanado em panko para uma crocância. O sabor é acentuado pelo queijo cremoso derretido, que se une a uma salada fresca e ralada. Acrescentamos também um toque defumado com fatias de bacon crocante. A cebola roxa traz notas adocicadas, acentuando a complexidade de sabores. Para finalizar, uma deliciosa maionese caseira, cremosa e suave, é acrescentada, elevando este hambúrguer ao seu máximo potencial de sabor. Tudo isso é cuidadosamente montado dentro de um pão brioche macio e levemente tostado. Um prazer incomparável a cada mordida!- R$ 30,90')">
+                    <img src="imagens/Pollito crispy burguer.png" alt="Pollito crispy burguer">
+                    <p><strong>Pollito crispy burguer</strong></p>
+                    <p class="price"><strong>R$ 30,90</strong></p>
+                </div>
+
+                <!-- Hambúrguer Tacos mexicanos-->
+                <div class="item" onclick="abrirPopup('imagens/Tacos mexicanos.png', 'Tacos mexicanos Dois tacos recheados de carne , jalapenho, Cebola roxa , picles e queijo mussarela ralado e Molho da casa - R$ 26,01')">
+                    <img src="imagens/Tacos mexicanos.png" alt="Tacos mexicanos">
+                    <p><strong>Tacos mexicanos</strong></p>
+                    <p class="price"><strong>R$ 26,01</strong></p>
+                </div>
+
+                <!-- Hambúrguer Pork burguer-->
+                <div class="item" onclick="abrirPopup('imagens/Pork burguer.png', 'Pork burguer Picanha suína 130gr, pão brioche selado na chapa com manteiga, queijo mussarela cebola roxa caramelizada com B.B.Q, molho grill, Bacon, salada agridoce e abacaxi- R$ 33,91')">
+                    <img src="imagens/Pork burguer.png" alt="Pork burguer">
+                    <p>Pork Hawaiian burguer</p>
+                    <p class="price">R$ 33,91</p>
+                </div>
+
+                <!-- Hambúrguer Texano -->
+                <div class="item" onclick="abrirPopup('imagens/Texano.png', 'Texano Com um blend generoso de 130gr de carne, o destaque vai para o exuberante pão brioche, selado luxuosamente na chapa com manteiga para conferir um sabor adicional e uma textura irresistivelmente crocante. O toque especial vem do queijo mussarela jalapenho defumado, que infunde um sabor autêntico e uma pitada de picância. Além disso, acrescentamos a crocância refrescante da alface, o sabor suave do tomate e a picância da cebola roxa. E para finalizar, uma generosa camada de maionese grill adiciona uma incrível cremosidade. Este hambúrguer é uma experiência gastronômica única, destinada a quem busca uma explosão de sabores inigualável. - R$ 32,31')">
+                    <img src="imagens/Texano.png" alt="Texano">
+                    <p>Texano</p>
+                    <p class="price">R$ 32,31</p>
+                </div>
+
+                <!-- Adicione mais itens aqui -->
+            </div>
+        </div>
+
+        <!-- Seção Molhos -->
+        <div class="section">
+            <h2>Molhos</h2>
+            <div class="itens-container">
+
+                <!--30gr de molho Black-->
+                <div class="item" onclick="abrirPopup('caminho/para/imagem-molho1.jpg', '30gr de molho Black - R$ 3,00')">
+                    <alt="30gr de molho grill do gringo">
+                    <p>30gr de molho Black</p>
+                    <p class="price">R$ 3,00</p>
+                </div>
+
+                <!--molho grill do gringo-->
+                <div class="item" onclick="abrirPopup('caminho/para/imagem-molho1.jpg', '30gr de molho grill do gringo - R$ 3,00')">
+                    <alt="30gr de molho grill do gringo">
+                    <p>30gr de molho grill do gringo</p>
+                    <p class="price">R$ 3,00</p>                
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção Monte seu Combo -->
+        <div class="section">
+
+<!-- Combo casal -->
+<h2>Monte seu Combo</h2>
+<div class="itens-container">
+    <div class="item" onclick="abrirPopup('imagens/Combo casal.png', 'Combo casal: 2 dadys burguer, 2 batatas média, 1 Coca-Cola de 1.5 ltrs - R$ 70,11')">
+        <img src="imagens/Combo casal.png" alt="Combo casal">
+        <p><strong>Combo casal</strong></p>
+        <p class="price"><strong>A partir de R$ 70,11</strong></p>
+    </div>
+</div>
+
+        <!-- Seção Bebidas -->
+        <div class="section">
+            <h2>Bebidas</h2>
+            <div class="itens-container">
+
+                <!--Coca-Cola Original 350ml -->
+                <div class="item" onclick="abrirPopup('imagens/Coca-Cola Original 350ml.png', 'Coca-Cola Original 350ml - R$ 6,00')">
+                    <img src="imagens/Coca-Cola Original 350ml.png" alt="Coca-Cola Original 350ml">
+                    <p>Coca-Cola Original 350ml</p>
+                    <p class="price">R$ 6,00</p>
+                </div>
+
+                <!-- Suco da polpa da fruta -->
+                <div class="item" onclick="abrirPopup('imagens/Suco da polpa da fruta.png', 'Suco da polpa da fruta uma bebida refrescante e revitalizante da categoria Bebidas. Este suco é habilmente preparado a partir de uma variedade de polpas de frutas tropicais, incluindo o exótico maracujá, o doce caju, a vibrante acerola e a combinação perfeita de manga com maracujá. Também oferecemos o raro e delicioso sabor de cajá. Cada gole é uma explosão de sabores naturais que irão rejuvenescer seus sentidos e fornecer uma dose saudável de vitaminas e minerais essenciais. - R$ 8,00')">
+                    <img src="imagens/Suco da polpa da fruta.png" alt="Suco da polpa da fruta">
+                    <p>Suco da polpa da fruta</p>
+                    <p class="price">R$ 8,00</p>
+                </div>
+                 
+                <!-- Suco de cajá -->
+                <div class="item" onclick="abrirPopup('imagens/suco de cajá.png', 'Suco de caja 300ml  - R$ 7,00')">
+                    <img src="imagens/suco de cajá.png" alt="Suco de caja 300ml">
+                    <p>Suco de caja 300ml</p>
+                    <p class="price">R$ 7,00</p>
+                </div>
+
+                <!-- Água Crystal Sem Gás 500ml -->
+                <div class="item" onclick="abrirPopup('imagens/agua.png', 'Água Crystal Sem Gás 500ml - R$ 3,50')">
+                    <img src="imagens/agua.png" alt="Água Crystal Sem Gás 500ml">
+                    <p>Água Crystal Sem Gás 500ml</p>
+                    <p class="price">R$ 3,50</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção Porções -->
+        <div class="section">
+            <h2>Porções</h2>
+            <div class="itens-container">
+
+                <!--Batata do gringo-->
+                <div class="item" onclick="abrirPopup('imagens/Batata do gringo.png', 'Batata do gringo Deliciosas batatas fritas, crocantes por fora e macias por dentro, são cobertas por uma suculenta carne desfiada, cuidadosamente temperada. Para finalizar, uma camada de queijo prato, derretido até a perfeição, cobre tudo, tornando-se uma combinação irresistível. Este prato é a fusão perfeita de sabores, uma verdadeira experiência gastronômica que vai além de uma simples porção. Ideal para compartilhar com os amigos ou saborear individualmente. - R$ 31,41')">
+                    <img src="imagens/Batata do gringo.png" alt="Batata do gringo">
+                    <p>Batata do gringo</p>
+                    <p class="price">R$ 31,41</p>
+                </div>
+
+                <!--Batata do gringo-->
+                <div class="item" onclick="abrirPopup('imagens/Batata do gringo 2.png', 'Batata do gringo Batata frita 7mm crocante com um delicioso molho e farofa de bacom - R$ 25,90')">
+                    <img src="imagens/Batata do gringo 2.png" alt="Batata do gringo">
+                    <p>Batata do gringo</p>
+                    <p class="price">R$ 25,90</p>
+                </div>
+
+                <!--Batata frita-->
+                <div class="item" onclick="abrirPopup('imagens/batata frita 3.png', 'Batata frita média - R$ 12,26')">
+                    <img src="imagens/batata frita 3.png" alt="Batata frita">
+                    <p><strong>Batata frita</strong></p>
+                    <p class="price"><strong>R$ 12,26</strong></p>
+                </div>
+
+                <!-- Batata frita grande -->
+                <div class="item" onclick="abrirPopup('imagens/batata frita grande.png', 'Batata frita grande: Tanto que dá para compartilhar com aquela pessoa especial. - R$ 16,99')">
+                    <img src="imagens/batata frita grande.png" alt="Batata frita grande">
+                    <p><strong>Batata frita grande</strong></p>
+                    <p class="price"><strong>R$ 16,99</strong></p>
+                </div>
+
+                <!-- Aro de cebola -->
+                <div class="item" onclick="abrirPopup('imagens/aro de cebola.jpeg', 'Aro de cebola: Cebolas cortadas em formas de anéis empanadas, com uma leve camada de farinha panko temperada, bem crocante, ideal para acompanhar seu sanduíche e saladas 15 unidades. - R$ 18,90')">
+                    <img src="imagens/aro de cebola.jpeg" alt="Aro de cebola">
+                    <p><strong>Aro de cebola</strong></p>
+                    <p class="price"><strong>R$ 18,90</strong></p>
+                 </div>
+
+                <!-- Tender de frango empanado -->
+                <div class="item" onclick="abrirPopup('imagens/Tender de frango empanado.png', 'Tender de frango empanado: Delicioso Tender de Frango Empanado, com 450 gramas de suculento filé de coxa e sobrecoxa. O frango é cuidadosamente empanado no Panko, que lhe confere uma crocância única e irresistível. Acompanha batatas rústicas, assadas ao ponto da perfeição para um toque de autenticidade e sabor. O prato é finalizado com dois molhos especiais da casa, cuidadosamente elaborados para realçar ainda mais o sabor. Uma porção generosa que promete satisfazer os paladares mais exigentes. - R$ 36,90')">
+                    <img src="imagens/Tender de frango empanado.png" alt="Tender de frango empanado">
+                    <p><strong>Tender de frango empanado</strong></p>
+                    <p class="price"><strong>R$ 36,90</strong></p>                
+        </div>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+            <button class="close-btn" onclick="fecharPopup()">X</button>
+            <img id="popupImage" src="" alt="Imagem do Produto">
+            <p id="popupDescricao"></p>
+        </div>
+    </div>
+
+    <script>
+        function abrirPopup(imagemSrc, descricao) {
+            const popupOverlay = document.getElementById('popupOverlay');
+            const popupImage = document.getElementById('popupImage');
+            const popupDescricao = document.getElementById('popupDescricao');
+
+            popupImage.src = imagemSrc;
+            popupDescricao.textContent = descricao;
+            popupOverlay.style.display = 'flex';
+        }
+
+        function fecharPopup() {
+            const popupOverlay = document.getElementById('popupOverlay');
+            popupOverlay.style.display = 'none';
+        }
+    </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const containers = document.querySelectorAll('.itens-container');
+
+        containers.forEach(container => {
+            const itens = container.querySelectorAll('.item');
+
+            if (itens.length === 2) {
+                container.classList.add('centralizado');
+            }
+        });
+    });
+</script>
+
+<!-- Seção do Endereço -->
+<div class="endereco-container">
+    <div class="endereco">
+        <h3> <p>&#x1F4CD</p> <ins>Nosso</ins> Endereço<h3>
+        <p> Condomínio mini chácara qms 32 lt 09 kit Studio 01, sobradinho 2, Brasília - DF, 73069-061</p>
+    </div>
+</div>
+<!-- Botão do WhatsApp -->
+<a href="https://wa.me/5561985701623" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span>Fale conosco</span>
+</a>
+</body>
+</html>

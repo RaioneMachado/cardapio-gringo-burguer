@@ -1,0 +1,410 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.menu {
+    max-width: 1500px;
+    margin: 0 auto;
+    background-color: #111; /* Fundo escuro para o cardápio */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 223, 0, 0.5); /* Sombra amarela */
+    border: 5px solid #ffdf00; /* Aumentei a borda para 5px para testar */
+}
+
+/* Container da logo e textos */
+.logo-container {
+    display: flex; /* Usa flexbox para alinhar os itens horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 20px; /* Espaço entre os elementos */
+    margin-bottom: 20px;
+}
+
+/* Estilo para os textos "GRINGO" e "BURGUER" */
+.logo-text-left,
+.logo-text-right {
+    font-size: 4rem; /* Tamanho grande */
+    font-weight: bold;
+    color: #ffdf00; /* Amarelo */
+    opacity: 0.50; /* Deixa o texto semi-transparente */
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+}
+
+/* Estilo para a logo */
+.logo {
+    max-width: 300px; /* Tamanho da logo */
+    height: auto;
+    display: block;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .logo-text-left,
+    .logo-text-right {
+        font-size: 2rem; /* Reduz o tamanho do texto em telas menores */
+    }
+
+    .logo {
+        max-width: 100px; /* Reduz o tamanho da logo em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 2rem; /* Tamanho ainda menor para telas muito pequenas */
+    }
+
+    .logo {
+        max-width: 120px; /* Tamanho menor para telas muito pequenas */
+    }
+}
+
+.logo {
+    max-width: 350px;
+    height: auto;
+    border: 2px solid #ffdf00; /* Borda amarela */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(255, 223, 0, 0.5); /* Sombra amarela */
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ffdf00; /* Amarelo */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ffdf00; /* Linha amarela abaixo do título */
+    padding-bottom: 5px;
+}
+
+/* Container para os itens do cardápio */
+/* Container para os itens do cardápio */
+.itens-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanho igual */
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+/* Classe para quando houver apenas 2 itens */
+.itens-container.centralizado {
+    display: flex; /* Muda para Flexbox */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+}
+
+/* Ajuste para 2 itens */
+.itens-container.centralizado .item {
+    flex: 0 1 calc(33.33% - 20px); /* Cada item ocupa 33.33% do container, menos o gap */
+    max-width: calc(33.33% - 20px); /* Limita a largura para 2 itens por linha */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .itens-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
+    }
+
+    .itens-container.centralizado {
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* Ajuste o espaçamento conforme necessário */
+    }
+
+    .itens-container.centralizado .item {
+        flex: 0 1 calc(50% - 20px); /* Mantém 2 itens por linha */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .itens-container {
+        grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
+    }
+
+    .itens-container.centralizado .item {
+        flex: 0 1 100%; /* 1 item por linha */
+        max-width: 100%;
+    }
+}
+
+
+/* Estilo para cada item do cardápio */
+.item {
+    display: flex;
+    align-items: center; /* Alinha a imagem e o texto verticalmente */
+    margin-bottom: 15px;
+    background-color: #222; /* Fundo escuro para os itens */
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: scale(1.02); /* Efeito de zoom ao passar o mouse */
+}
+
+.item img {
+    width: 50px; /* Tamanho pequeno para a imagem */
+    height: 50px; /* Tamanho pequeno para a imagem */
+    border-radius: 5px;
+    margin-right: 15px; /* Espaço entre a imagem e o texto */
+    object-fit: cover; /* Garante que a imagem cubra o espaço */
+}
+
+.item p {
+    flex: 1; /* Ocupa o espaço restante */
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 0; /* Remove margens padrão do parágrafo */
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffdf00; /* Amarelo */
+    margin-left: 15px; /* Espaço entre o texto e o preço */
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    .item {
+        flex-direction: column; /* Alinha os itens verticalmente */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .item img {
+        margin-right: 0;
+        margin-bottom: 10px; /* Espaço abaixo da imagem */
+    }
+
+    .price {
+        margin-left: 0; /* Remove o espaço à esquerda do preço */
+        margin-top: 10px; /* Espaço acima do preço */
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .logo-text-left,
+    .logo-text-right {
+        font-size: 2rem; /* Reduz o tamanho do texto em telas menores */
+    }
+
+    .logo {
+        max-width: 100px; /* Reduz o tamanho da logo em telas menores */
+    }
+}
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 2rem; /* Tamanho ainda menor para telas muito pequenas */
+    }
+
+    .logo {
+        max-width: 120px; /* Tamanho menor para telas muito pequenas */
+    }
+}
+
+.logo {
+    max-width: 350px;
+    height: auto;
+    border: 2px solid #ffdf00; /* Borda amarela */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(255, 223, 0, 0.5); /* Sombra amarela */
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ffdf00; /* Amarelo */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ffdf00; /* Linha amarela abaixo do título */
+    padding-bottom: 5px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #222; /* Fundo escuro para os itens */
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: scale(1.02); /* Efeito de zoom ao passar o mouse */
+}
+
+.item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin-right: 15px;
+    object-fit: cover; /* Garante que a imagem cubra o espaço */
+}
+
+.item p {
+    flex: 1;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffdf00; /* Amarelo */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .item img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        max-width: 150px; /* Reduz o tamanho da logo em dispositivos móveis */
+    }
+}
+/* Estilo para a popup */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro semi-transparente */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #222; /* Fundo escuro */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+}
+
+.popup-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.popup-content p {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.popup-content .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffdf00; /* Amarelo */
+    border: none;
+    color: #000;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.popup-content .close-btn:hover {
+    background-color: #e6c200; /* Amarelo mais escuro */
+}
+/* Estilo para o container do endereço */
+.endereco-container {
+    background-color: #111; /* Fundo escuro */
+    padding: 20px;
+    text-align: center; /* Centraliza o texto */
+    border-top: 2px solid #ffdf00; /* Linha amarela no topo */
+    margin-top: 30px; /* Espaço acima do endereço */
+}
+
+/* Estilo para o texto do endereço */
+.endereco h3 {
+    font-size: 1.5rem;
+    color: #ffdf00; /* Amarelo */
+    margin-bottom: 10px;
+}
+
+.endereco p {
+    font-size: 1.1rem;
+    color: #fff; /* Texto branco */
+    margin: 0;
+}
+/* Estilo do botão do WhatsApp */
+.whatsapp-float {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 20px; /* Distância do fundo */
+    right: 20px; /* Distância da direita */
+    background-color: #25d366; /* Cor verde do WhatsApp */
+    color: #fff; /* Cor do ícone */
+    width: 60px; /* Largura do botão */
+    height: 60px; /* Altura do botão */
+    border-radius: 50%; /* Formato circular */
+    text-align: center; /* Centraliza o ícone */
+    font-size: 30px; /* Tamanho do ícone */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove sublinhado do link */
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+/* Efeito ao passar o mouse */
+.whatsapp-float:hover {
+    background-color: #128c7e; /* Cor mais escura ao passar o mouse */
+}
+
+/* Ícone do WhatsApp */
+.whatsapp-float i {
+    margin-top: 5px; /* Ajuste fino para centralizar o ícone */
+}
+.whatsapp-float span {
+    margin-left: 10px;
+    font-size: 16px;
+    display: none; /* Oculta o texto por padrão */
+}
+
+.whatsapp-float:hover span {
+    display: inline; /* Mostra o texto ao passar o mouse */
+}
+/* Estilos para a imagem no popup */
+#popupImage {
+    max-width: 50%; /* A imagem não ultrapassa a largura do contêiner */
+    max-height: 60vh; /* Limita a altura da imagem a 60% da altura da tela */
+    width: auto; /* Mantém a proporção da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Borda arredondada (opcional) */
+}
