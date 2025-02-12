@@ -32,15 +32,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* Estilo para os textos "GRINGO" e "BURGUER" */
-.logo-text-left,
-.logo-text-right {
-    font-size: 4rem; /* Tamanho grande */
-    font-weight: bold;
-    color: #ffdf00; /* Amarelo */
-    opacity: 0.50; /* Deixa o texto semi-transparente */
-    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
-}
 
 /* Estilo para a logo */
 .logo {
@@ -92,7 +83,6 @@ h2 {
 }
 
 /* Container para os itens do cardápio */
-/* Container para os itens do cardápio */
 .itens-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanho igual */
@@ -141,7 +131,6 @@ h2 {
     }
 }
 
-
 /* Estilo para cada item do cardápio */
 .item {
     display: flex;
@@ -178,6 +167,7 @@ h2 {
     color: #ffdf00; /* Amarelo */
     margin-left: 15px; /* Espaço entre o texto e o preço */
 }
+
 /* Responsividade */
 @media (max-width: 768px) {
     .item {
@@ -196,97 +186,6 @@ h2 {
     }
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .logo-text-left,
-    .logo-text-right {
-        font-size: 2rem; /* Reduz o tamanho do texto em telas menores */
-    }
-
-    .logo {
-        max-width: 100px; /* Reduz o tamanho da logo em telas menores */
-    }
-}
-@media (max-width: 480px) {
-    .logo-text {
-        font-size: 2rem; /* Tamanho ainda menor para telas muito pequenas */
-    }
-
-    .logo {
-        max-width: 120px; /* Tamanho menor para telas muito pequenas */
-    }
-}
-
-.logo {
-    max-width: 350px;
-    height: auto;
-    border: 2px solid #ffdf00; /* Borda amarela */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 0 10px rgba(255, 223, 0, 0.5); /* Sombra amarela */
-}
-
-.section {
-    margin-bottom: 30px;
-}
-
-h2 {
-    font-size: 2rem;
-    color: #ffdf00; /* Amarelo */
-    margin-bottom: 15px;
-    border-bottom: 2px solid #ffdf00; /* Linha amarela abaixo do título */
-    padding-bottom: 5px;
-}
-
-.item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    background-color: #222; /* Fundo escuro para os itens */
-    padding: 10px;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-}
-
-.item:hover {
-    transform: scale(1.02); /* Efeito de zoom ao passar o mouse */
-}
-
-.item img {
-    width: 100px;
-    height: 100px;
-    border-radius: 5px;
-    margin-right: 15px;
-    object-fit: cover; /* Garante que a imagem cubra o espaço */
-}
-
-.item p {
-    flex: 1;
-    font-size: 1.1rem;
-    color: #fff;
-}
-
-.price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #ffdf00; /* Amarelo */
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .item {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .item img {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .logo {
-        max-width: 150px; /* Reduz o tamanho da logo em dispositivos móveis */
-    }
-}
 /* Estilo para a popup */
 .popup-overlay {
     display: none;
@@ -340,6 +239,7 @@ h2 {
 .popup-content .close-btn:hover {
     background-color: #e6c200; /* Amarelo mais escuro */
 }
+
 /* Estilo para o container do endereço */
 .endereco-container {
     background-color: #111; /* Fundo escuro */
@@ -361,6 +261,7 @@ h2 {
     color: #fff; /* Texto branco */
     margin: 0;
 }
+
 /* Estilo do botão do WhatsApp */
 .whatsapp-float {
     position: fixed; /* Fixa o botão na tela */
@@ -391,6 +292,7 @@ h2 {
 .whatsapp-float i {
     margin-top: 5px; /* Ajuste fino para centralizar o ícone */
 }
+
 .whatsapp-float span {
     margin-left: 10px;
     font-size: 16px;
@@ -400,6 +302,7 @@ h2 {
 .whatsapp-float:hover span {
     display: inline; /* Mostra o texto ao passar o mouse */
 }
+
 /* Estilos para a imagem no popup */
 #popupImage {
     max-width: 50%; /* A imagem não ultrapassa a largura do contêiner */
