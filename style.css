@@ -32,6 +32,15 @@ body {
     margin-bottom: 20px;
 }
 
+/* Estilo para os textos "GRINGO" e "BURGUER" */
+.logo-text-left,
+.logo-text-right {
+    font-size: 4rem; /* Tamanho grande */
+    font-weight: bold;
+    color: #ffdf00; /* Amarelo */
+    opacity: 0.50; /* Deixa o texto semi-transparente */
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+}
 
 /* Estilo para a logo */
 .logo {
@@ -89,45 +98,22 @@ h2 {
     gap: 20px; /* Espaçamento entre os itens */
 }
 
-/* Classe para quando houver apenas 2 itens */
-.itens-container.centralizado {
-    display: flex; /* Muda para Flexbox */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-}
-
-/* Ajuste para 2 itens */
-.itens-container.centralizado .item {
-    flex: 0 1 calc(33.33% - 20px); /* Cada item ocupa 33.33% do container, menos o gap */
-    max-width: calc(33.33% - 20px); /* Limita a largura para 2 itens por linha */
-}
-
-/* Responsividade */
+/* Responsividade para tablets */
 @media (max-width: 768px) {
     .itens-container {
         grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
     }
-
-    .itens-container.centralizado {
-        display: flex;
-        justify-content: center;
-        gap: 20px; /* Ajuste o espaçamento conforme necessário */
-    }
-
-    .itens-container.centralizado .item {
-        flex: 0 1 calc(50% - 20px); /* Mantém 2 itens por linha */
-        max-width: calc(50% - 20px);
-    }
 }
 
+/* Responsividade para celulares */
 @media (max-width: 480px) {
     .itens-container {
-        grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas muito pequenas */
     }
 
-    .itens-container.centralizado .item {
-        flex: 0 1 100%; /* 1 item por linha */
-        max-width: 100%;
+    .item img {
+        width: 80px; /* Reduz o tamanho da imagem em celulares */
+        height: 80px; /* Reduz o tamanho da imagem em celulares */
     }
 }
 
@@ -147,8 +133,8 @@ h2 {
 }
 
 .item img {
-    width: 50px; /* Tamanho pequeno para a imagem */
-    height: 50px; /* Tamanho pequeno para a imagem */
+    width: 100px; /* Tamanho padrão para a imagem */
+    height: 100px; /* Tamanho padrão para a imagem */
     border-radius: 5px;
     margin-right: 15px; /* Espaço entre a imagem e o texto */
     object-fit: cover; /* Garante que a imagem cubra o espaço */
