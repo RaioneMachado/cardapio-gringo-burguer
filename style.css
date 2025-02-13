@@ -19,7 +19,7 @@ body {
     background-color: #111; /* Fundo escuro para o cardápio */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 223, 0, 0.5); /* Sombra amarela */
+    box-shadow: 0 0 0px rgba(255, 223, 0, 0.5); /* Sombra amarela */
     /* border: 5px solid #ffdf00; */ /* Linha amarela removida */
 }
 
