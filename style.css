@@ -93,35 +93,15 @@ h2 {
 
 /* Container para os itens do cardápio */
 .itens-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanho igual */
+    display: flex;
+    flex-direction: column; /* 1 item por linha */
     gap: 20px; /* Espaçamento entre os itens */
-}
-
-/* Responsividade para tablets */
-@media (max-width: 768px) {
-    .itens-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
-    }
-}
-
-/* Responsividade para celulares */
-@media (max-width: 480px) {
-    .itens-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas muito pequenas */
-    }
-
-    .item img {
-        width: 80px; /* Reduz o tamanho da imagem em celulares */
-        height: 80px; /* Reduz o tamanho da imagem em celulares */
-    }
 }
 
 /* Estilo para cada item do cardápio */
 .item {
     display: flex;
     align-items: center; /* Alinha a imagem e o texto verticalmente */
-    margin-bottom: 15px;
     background-color: #222; /* Fundo escuro para os itens */
     padding: 10px;
     border-radius: 5px;
@@ -133,8 +113,8 @@ h2 {
 }
 
 .item img {
-    width: 100px; /* Tamanho padrão para a imagem */
-    height: 100px; /* Tamanho padrão para a imagem */
+    width: 100px; /* Tamanho fixo para a imagem */
+    height: 100px; /* Tamanho fixo para a imagem */
     border-radius: 5px;
     margin-right: 15px; /* Espaço entre a imagem e o texto */
     object-fit: cover; /* Garante que a imagem cubra o espaço */
@@ -157,18 +137,12 @@ h2 {
 /* Responsividade */
 @media (max-width: 768px) {
     .item {
-        flex-direction: column; /* Alinha os itens verticalmente */
-        text-align: center; /* Centraliza o texto */
+        flex-direction: row; /* Mantém a imagem ao lado da descrição */
     }
 
     .item img {
-        margin-right: 0;
-        margin-bottom: 10px; /* Espaço abaixo da imagem */
-    }
-
-    .price {
-        margin-left: 0; /* Remove o espaço à esquerda do preço */
-        margin-top: 10px; /* Espaço acima do preço */
+        width: 80px; /* Reduz o tamanho da imagem em dispositivos móveis */
+        height: 80px; /* Reduz o tamanho da imagem em dispositivos móveis */
     }
 }
 
